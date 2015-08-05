@@ -32,29 +32,31 @@
                                     <action selector="signOut:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="UWA-ur-L2j"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jep-Qu-RI0" userLabel="login" customClass="GPPSignInButton">
+                                <rect key="frame" x="60" y="252" width="480" height="36"/>
+                                <state key="normal">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="Jep-Qu-RI0" firstAttribute="height" secondItem="AIY-w8-ZOT" secondAttribute="height" id="AqL-pd-uvA"/>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="Hjt-vN-g3F" secondAttribute="bottom" constant="200" id="B4U-4d-tk0"/>
-                            <constraint firstAttribute="centerY" secondItem="AIY-w8-ZOT" secondAttribute="centerY" id="E4I-dZ-yHv"/>
                             <constraint firstItem="Hjt-vN-g3F" firstAttribute="top" secondItem="AIY-w8-ZOT" secondAttribute="bottom" constant="20" id="Jny-oa-6zB"/>
+                            <constraint firstItem="Jep-Qu-RI0" firstAttribute="centerX" secondItem="AIY-w8-ZOT" secondAttribute="centerX" id="Nrx-GZ-xPQ"/>
+                            <constraint firstItem="Jep-Qu-RI0" firstAttribute="width" secondItem="AIY-w8-ZOT" secondAttribute="width" id="P10-oy-zqC"/>
                             <constraint firstItem="AIY-w8-ZOT" firstAttribute="height" secondItem="Hjt-vN-g3F" secondAttribute="height" id="PLy-LI-dEV"/>
                             <constraint firstAttribute="trailing" secondItem="AIY-w8-ZOT" secondAttribute="trailing" constant="60" id="S9b-hB-fOp"/>
-                            <constraint firstAttribute="centerX" secondItem="AIY-w8-ZOT" secondAttribute="centerX" id="UBr-3y-z34"/>
-                            <constraint firstItem="AIY-w8-ZOT" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="200" id="X9P-Rq-4kB"/>
                             <constraint firstItem="AIY-w8-ZOT" firstAttribute="width" secondItem="Hjt-vN-g3F" secondAttribute="width" id="YXc-pJ-ESg"/>
+                            <constraint firstItem="AIY-w8-ZOT" firstAttribute="top" secondItem="Jep-Qu-RI0" secondAttribute="bottom" constant="20" id="g7U-rS-Pvv"/>
                             <constraint firstItem="AIY-w8-ZOT" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="60" id="idd-Pp-WW2"/>
                             <constraint firstItem="AIY-w8-ZOT" firstAttribute="centerX" secondItem="Hjt-vN-g3F" secondAttribute="centerX" id="q26-JV-OJJ"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="E4I-dZ-yHv"/>
-                                <exclude reference="UBr-3y-z34"/>
-                                <exclude reference="X9P-Rq-4kB"/>
-                            </mask>
-                        </variation>
                     </view>
                     <connections>
+                        <outlet property="googleLogInBtn" destination="Jep-Qu-RI0" id="Nh1-dz-7XW"/>
                         <outlet property="logoutBtn" destination="Hjt-vN-g3F" id="xdM-B5-ybq"/>
                         <outlet property="signInButton" destination="AIY-w8-ZOT" id="XqJ-Y6-eUW"/>
                     </connections>

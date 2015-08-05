@@ -14,7 +14,7 @@
 
 @property (nonatomic, weak) IBOutlet GPPSignInButton *signInButton;
 @property (nonatomic, weak) IBOutlet UIButton *logoutBtn;
-@property (nonatomic, strong) GPPSignIn *signIn;
+@property (nonatomic, weak) IBOutlet GPPSignInButton *googleLogInBtn;
 
 @end
 
@@ -22,6 +22,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+
+    UILabel *googleLogInLbl = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width - 120, self.googleLogInBtn.bounds.size.height)];
+    googleLogInLbl.text = @"google Login";
+    googleLogInLbl.backgroundColor = [UIColor lightGrayColor];
+    googleLogInLbl.textAlignment = NSTextAlignmentCenter;
+    [self.googleLogInBtn addSubview:googleLogInLbl];
+
     GPPSignIn *signIn = [GPPSignIn sharedInstance];
     // You previously set kClientId in the "Initialize the Google+ client" step
     signIn.clientID = @"932229984048-5bppk4s20cglaqi1mb98tit7vqqteio5.apps.googleusercontent.com";
@@ -37,6 +44,7 @@
 - (void)finishedWithAuth: (GTMOAuth2Authentication *)auth error:(NSError *)error {
     if (error) {
         //Handle Error
+        NSLog(@"error:%@", error);
     } else {
         [self refreshInterfaceBasedOnSignIn];
         // 1. Create a |GTLServicePlus| instance to send a request to Google+.
@@ -69,16 +77,17 @@
     }
 }
 
--(void)refreshInterfaceBasedOnSignIn
-{
+-(void)refreshInterfaceBasedOnSignIn {
     if ([[GPPSignIn sharedInstance] authentication]) {
         // The user is signed in.
         self.signInButton.hidden = YES;
         self.logoutBtn.hidden = NO;
+        self.googleLogInBtn.hidden = YES;
         // Perform other actions here, such as showing a sign-out button
     } else {
         self.signInButton.hidden = NO;
         self.logoutBtn.hidden = YES;
+        self.googleLogInBtn.hidden = NO;
         // Perform other actions here
     }
 }

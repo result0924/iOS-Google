@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>D213709A-5247-45E9-A9AE-D3B40BE4B5D5</string>
+	<key>IDESourceControlProjectName</key>
+	<string>googlePlus</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>B77E8C5C0726CDCBC7529DEBE581FADB021B80A4</key>
+		<string>github.com:result0924/iOS-Google.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>iOS-GooglePlus-Sample/googlePlus.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>B77E8C5C0726CDCBC7529DEBE581FADB021B80A4</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>github.com:result0924/iOS-Google.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>B77E8C5C0726CDCBC7529DEBE581FADB021B80A4</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>B77E8C5C0726CDCBC7529DEBE581FADB021B80A4</string>
+			<key>IDESourceControlWCCName</key>
+			<string>iOS-GOOGLE</string>
+		</dict>
+	</array>
+</dict>
+</plist>
