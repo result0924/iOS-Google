@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AIY-w8-ZOT" customClass="GPPSignInButton">
+                                <rect key="frame" x="60" y="308" width="480" height="36"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hjt-vN-g3F">
+                                <rect key="frame" x="60" y="364" width="480" height="36"/>
+                                <color key="backgroundColor" red="0.26666666666666666" green="0.45098039215686275" blue="0.44313725490196076" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Logout">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="signOut:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="UWA-ur-L2j"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="Hjt-vN-g3F" secondAttribute="bottom" constant="200" id="B4U-4d-tk0"/>
+                            <constraint firstAttribute="centerY" secondItem="AIY-w8-ZOT" secondAttribute="centerY" id="E4I-dZ-yHv"/>
+                            <constraint firstItem="Hjt-vN-g3F" firstAttribute="top" secondItem="AIY-w8-ZOT" secondAttribute="bottom" constant="20" id="Jny-oa-6zB"/>
+                            <constraint firstItem="AIY-w8-ZOT" firstAttribute="height" secondItem="Hjt-vN-g3F" secondAttribute="height" id="PLy-LI-dEV"/>
+                            <constraint firstAttribute="trailing" secondItem="AIY-w8-ZOT" secondAttribute="trailing" constant="60" id="S9b-hB-fOp"/>
+                            <constraint firstAttribute="centerX" secondItem="AIY-w8-ZOT" secondAttribute="centerX" id="UBr-3y-z34"/>
+                            <constraint firstItem="AIY-w8-ZOT" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="200" id="X9P-Rq-4kB"/>
+                            <constraint firstItem="AIY-w8-ZOT" firstAttribute="width" secondItem="Hjt-vN-g3F" secondAttribute="width" id="YXc-pJ-ESg"/>
+                            <constraint firstItem="AIY-w8-ZOT" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="60" id="idd-Pp-WW2"/>
+                            <constraint firstItem="AIY-w8-ZOT" firstAttribute="centerX" secondItem="Hjt-vN-g3F" secondAttribute="centerX" id="q26-JV-OJJ"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="E4I-dZ-yHv"/>
+                                <exclude reference="UBr-3y-z34"/>
+                                <exclude reference="X9P-Rq-4kB"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="logoutBtn" destination="Hjt-vN-g3F" id="xdM-B5-ybq"/>
+                        <outlet property="signInButton" destination="AIY-w8-ZOT" id="XqJ-Y6-eUW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
